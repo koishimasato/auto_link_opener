@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+    <title>Auto Opener設定</title>
+    <link rel="stylesheet" href="config.css" type="text/css" />
+  </head>
+  <body>
+    <h1>Auto Opener設定</h1>
+    <div id="main-section">
+
+      <h2>キーボードショートカット</h2>
+      <p class="notice">ポップアップを開くショートカットは、デフォルトでは Ctrl+Shift+O に設定されています。 <br>
+        <a href="#" class="extensions-link">拡張機能ページ</a>最下部の「キーボード ショートカット」より変更できます。
+      </p>
+
+      <h2>White List</h2>
+      <table>
+        <tr class="exclusionRuleTemplateInstance">
+          <td><input type="text" class="pattern" spellcheck="false" placeholder="URL pattern"></td>
+          <td class="exclusionRemove"><input type="button" class="exclusionRemoveButton" value="✖"></td>
+        </tr>
+      </table>
+      <button class="saveButton" value="Save" />
+    </div>
+  </body>
+</html>

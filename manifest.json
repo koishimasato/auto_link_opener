@@ -1,23 +1,32 @@
 {
-   "background": {
-      "page": "background/background.html"
-   },
-   "content_scripts": [
-      {
-        "all_frames": false,
-        "css": [ "content/widget.css" ],
-        "js": [ "content/widget.js" ],
-        "matches": [ "http://*/*", "https://*/*" ],
-        "run_at": "document_end"
-     }
-   ],
-   "description": "desc",
-   "icons": {
-      "128": "images/favicon128.png"
-   },
-   "manifest_version": 2,
-   "name": "Qiita Counter",
-   "permissions": [ "http://*/*", "https://*/*", "tabs", "bookmarks", "unlimited_storage", "contextMenus" ],
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "0.0.1"
+  "background": {
+    "page": "background/background.html"
+  },
+  "commands": {
+    "open_url": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+O",
+        "mac": "MacCtrl+Shift+O"
+      },
+      "description": "open url in background tabs"
+    }
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "js": [ "content/widget.js" ],
+      "matches": [ "https://www.google.co.jp/search*" ],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "background/config.html",
+  "description": "desc",
+  "icons": {
+    "128": "images/favicon128.png"
+  },
+  "manifest_version": 2,
+  "name": "Auto Opener",
+  "permissions": [ "http://*/*", "https://*/*", "tabs", "bookmarks", "unlimited_storage", "contextMenus" ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "0.0.1"
 }
